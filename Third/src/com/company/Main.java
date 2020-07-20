@@ -6,6 +6,7 @@ public class Main {
         System.out.println("Let's create some cars");
         Car kia=new Car();
         Car bmw=new Car("Black","BMW",250,false,100);
+        Car.setSpeedLimit(100);
         kia.printAllMainCarData();
         bmw.printAllMainCarData();
         kia.printAllMainPassengersData();
@@ -42,5 +43,8 @@ public class Main {
             i.printAllMainCarData();
             System.out.println();
         }
+        kia.accelerating(100);
+        kia.printAllMainCarData();
+
 
     }}

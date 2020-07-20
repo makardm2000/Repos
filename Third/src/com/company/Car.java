@@ -8,8 +8,10 @@ public class Car {
     byte curGear;
     boolean trailerMount;
     double weight;
-    static byte numberOfWheels;
+    final byte numberOfWheels;
     Man[] passengers = new Man[4];
+    static int numberOfPassengers;
+    private static int speedLimit;
     {
         numberOfWheels =4;
         curGear = 0;
@@ -36,6 +38,20 @@ public class Car {
         this.maxSpeed=(short)maxSpeed;
 
     }
+
+    static public void setSpeedLimit(int i){
+        speedLimit = i;
+    }
+    static public int getSpeedLimit(){
+        return speedLimit;
+    }
+
+    /*public void setNumberOfPassengers(int i){
+        numberOfPassengers=i;
+    }
+    public int getNumberOfPassengers(){
+        return numberOfPassengers;
+    }*/
 
     public short getCurSpeed() {
         return curSpeed;
@@ -87,6 +103,10 @@ public class Car {
             curGear=5;
     }
     private void changeSpeed(int speed){
+        if(curSpeed+speed>speedLimit){
+            curSpeed = (short)((speedLimit>maxSpeed)?maxSpeed:speedLimit);
+        }
+        else
         if(curSpeed+speed>maxSpeed){
             curSpeed=maxSpeed;
         }
