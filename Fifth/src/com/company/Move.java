@@ -5,4 +5,5 @@ public interface Move {
  void slow();
  void moveRight();
  void moveLeft();
+ void move();
 }
