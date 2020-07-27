@@ -4,7 +4,8 @@ public class Car implements Move{
   private int maxSpeed;
   private int curSpeed;
   private int maxBSpeed;
-  
+  private String brand;
+
 
 
   public void accelerate() {
