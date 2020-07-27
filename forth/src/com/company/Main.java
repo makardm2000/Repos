@@ -3,13 +3,13 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) {
-	  task1();
-	  task2();
-	  task3();
-	  task4();
-	  task5();
-    }
+  public static void main(String[] args) {
+    task1();
+    task2();
+    task3();
+    task4();
+    task5();
+  }
 
   static public void task1(){
     System.out.println("\t*** №1 ***");
@@ -76,33 +76,33 @@ public class Main {
       }
       else
       if(i[1]==2){
-      if(i[2]%4!=0||i[0]==29){
-        System.out.println(1 + "|" + (i[1]+1) + "|" + i[2]);
-      }
-      else System.out.println((i[0] + 1) + "|" + i[1] + "|" + i[2]);
-      }
-      else
-      switch (i[1]){
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:if(i[0]==31){
+        if(i[2]%4!=0||i[0]==29){
           System.out.println(1 + "|" + (i[1]+1) + "|" + i[2]);
         }
-          break;
-        case 12:if(i[0]==31){
-          System.out.println(1 + "|" + 1 + "|" + (i[2]+1));
-        }
-          break;
-
-        default:
-          if(i[0]==30){
-            System.out.println(1 + "|" + i[1]+1 + "|" + i[2]);
-          }
-
+        else System.out.println((i[0] + 1) + "|" + i[1] + "|" + i[2]);
       }
+      else
+        switch (i[1]){
+          case 1:
+          case 3:
+          case 5:
+          case 7:
+          case 8:
+          case 10:if(i[0]==31){
+            System.out.println(1 + "|" + (i[1]+1) + "|" + i[2]);
+          }
+            break;
+          case 12:if(i[0]==31){
+            System.out.println(1 + "|" + 1 + "|" + (i[2]+1));
+          }
+            break;
+
+          default:
+            if(i[0]==30){
+              System.out.println(1 + "|" + i[1]+1 + "|" + i[2]);
+            }
+
+        }
 
     }
   }
@@ -120,10 +120,9 @@ public class Main {
       System.out.print(arrHouse[i][1][0]+ " на " +arrHouse[i][1][1]);
       System.out.print(" на участке "+arrPlace[i][0]+" на "+arrPlace[i][1]);
       boolean doesItCan=false;
-        
-      }
-      }
 
     }
   }
+
 }
+
